@@ -78,7 +78,7 @@
 }
 
 - (void)mouseMoved:(NSEvent *)theEvent {
-    mouseLocation = [theEvent locationInWindow];
+    mouseLocation = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     [self setNeedsDisplay:YES];
 }
 
